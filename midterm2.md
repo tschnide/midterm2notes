@@ -66,6 +66,7 @@
             * To traverse:
                 * The root k is at index 1 or array[1] . To find the children take 2k and 2k + 1. 
                 * To find parents take k/2. Integer division throws out the remainder and you get the right node.
+            * To ins
 #### Searching
 * Symbol tables
     * Two main operations
@@ -108,12 +109,12 @@
     * https://www.youtube.com/watch?v=gm8DUJJhmY4
 #### Quick reference 
 * Merge Sort
-    * Best and worst case run time N log N
+    * Best and worst case run time N log N (guaranteed)
     * In place ?
     * Recursive
 * Quick Sort
     * In place (This is an advantage that it has over Merge Sort )
-    * N log N
+    * N log N (This is a probabalistic guarantee)
     * Recursive
     * Not stable
 * Binary Tree
@@ -136,7 +137,19 @@
     * To sink, switch switch the key with its larger child until both children are smaller. 
     * To delete max switch the root with the end node then sink 
     * Del max and insert occur in log N time and the max function is constant 
-
+    * Binary heaps need to be complete
+    * To create a max heap from an array:
+        * Place the elements in the heap in level order
+            * They are in an array so technically this is already the case, but for the sake of drawing it this is how it would be done
+        * To find where to start:
+            * Find the leaves with this equation:
+                * N/2 + 1 to N
+            * Find all the other nodes (non leaves) with this equation:
+                * 1 to N/2
+            * The starting position is the last non leaf, start there and check both children, ( left then right ) if one is larger switch them.
+                * If both are larger switch with the largest
+            * Move to the next largest node and do the same thing until you have reached the top.
+            * If at any point, there is a switch that causes a sub tree to no longer be a max heap, switch the sub tree root with its largest child
 
 #### Questions
 * Does quicksort fully sort? The final step exchanges the partitioning element and the greatest element in the lesser sub partition. This means that it places it at index 0. So one element is out of place.
