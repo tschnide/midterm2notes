@@ -63,7 +63,14 @@
                 * The root k is at index 1 or array[1] . To find the children take 2k and 2k + 1. 
                 * To find parents take k/2. Integer division throws out the remainder and you get the right node.
 #### Searching
-* 
+* Symbol tables
+    * Two main operations
+        * Insert a value with a specified key
+        * Given a key, search for a value
+    * Symbol tables use associative arrays. These are arrays that index by key. 
+        * Because of this there cannot be more than one of the same key.
+        * Stated another way, put will overwrite an old value with a new one.
+
 #### Random 
 * asserts 1) help detect logical bugs and 2) documents the code 
     * asserts take boolean conditions
@@ -114,3 +121,5 @@
 * Does quicksort fully sort? The final step exchanges the partitioning element and the greatest element in the lesser sub partition. This means that it places it at index 0. So one element is out of place.
 * What is a stable sort? (put this in the random category) 
 * Quicksort randomizes every time. Why? Just to dislodge the index 0 element from the left array?
+* In this clip why is the value of "A" eight, and "C" twelve etc.? https://youtu.be/g8DejJF9THI?t=1081
+* 
