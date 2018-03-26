@@ -110,7 +110,6 @@
 #### Quick reference 
 * Merge Sort
     * Best and worst case run time N log N (guaranteed)
-    * In place ?
     * Recursive
 * Quick Sort
     * In place (This is an advantage that it has over Merge Sort )
@@ -157,4 +156,3 @@
 * Quicksort randomizes every time. Why? Just to dislodge the index 0 element from the left array?
 * In this clip why is the value of "A" eight, and "C" twelve etc.? https://youtu.be/g8DejJF9THI?t=1081
 * BST searching searches by key and returns value, what if you want to search by value?
-* 
