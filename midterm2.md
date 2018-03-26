@@ -2,7 +2,6 @@
 #### Sorting
 * Merge Sort
     * As you merge you always take the first A B | A C would take the A on the left and copy it to the array
-    * This is in place. In place means that it doesn't take any extra memory
     * Here is how the algorithm works:
         * Take a comparable array 
         * Given the starting element and the ending element find the center element
@@ -47,6 +46,11 @@
         * You can ensure that the partitioning element is closer to the middle by taking the median of three random selections from the array
 * Selection Sort
 * Insertion Sort
+    * In place
+    * Stable
+    * Best Case: 0(N)
+    * Worst Case: 0(N^2)
+    * Good for small N and partially ordered arrays
 * Priority Queue
     * Unlike other collections such as a stack or a queue, the priority queue removes the largest or smallest item contained
     * A Binary Heap operates in N log M time. Where M is the number of items in the heap.
@@ -70,6 +74,24 @@
     * Symbol tables use associative arrays. These are arrays that index by key. 
         * Because of this there cannot be more than one of the same key.
         * Stated another way, put will overwrite an old value with a new one.
+* Binary Search Tree
+    * A BST is a binary tree in symmeteric order
+        * Subtree: a child node and its children
+        * Symmetric order: each node has a key that is larger than all the nodes in its left subtree and smaller than all the nodes in its right subtree. 
+    * The underlying structure of a BST is a linked list 
+        * Four parts of a BST linked list node
+            * Key
+            * Value
+            * Reference to it's left subree 
+            * Reference to it's right subree 
+    * The BST search algorithm:
+        * Compare the search key (what you are looking for) to the root
+            * If greater compare to the right subtree
+            * If less compare to the left subtree
+            * If equal it is a hit
+        * Now continue the steps for each node until you find a hit 
+        * If the search comes to a point where it is greater than or less than a node (depending on the direction it's moving) and that node is null then it is a miss
+    * The BST insert algorithm is the same as its search, but instead of a hit, you would replace the element and instead of a miss you would instert the element.
 
 #### Random 
 * asserts 1) help detect logical bugs and 2) documents the code 
@@ -86,7 +108,7 @@
     * https://www.youtube.com/watch?v=gm8DUJJhmY4
 #### Quick reference 
 * Merge Sort
-    * N log N
+    * Best and worst case run time N log N
     * In place ?
     * Recursive
 * Quick Sort
@@ -117,9 +139,9 @@
 
 
 #### Questions
-* Is merge sort in place? Initially he says it is (first merge sort recording) later he says it isn't practically. Quora seemed to say that it is not.
 * Does quicksort fully sort? The final step exchanges the partitioning element and the greatest element in the lesser sub partition. This means that it places it at index 0. So one element is out of place.
 * What is a stable sort? (put this in the random category) 
 * Quicksort randomizes every time. Why? Just to dislodge the index 0 element from the left array?
 * In this clip why is the value of "A" eight, and "C" twelve etc.? https://youtu.be/g8DejJF9THI?t=1081
+* BST searching searches by key and returns value, what if you want to search by value?
 * 
